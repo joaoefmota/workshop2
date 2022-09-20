@@ -123,8 +123,33 @@ footer {
 }
 
 @media screen and (max-width: 360px) {
-    :root {
-        width: 368px;
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .featured-posts>h2 {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-column: 1 / -1;
+    }
+
+    .featured-posts article:nth-child(2) {
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+
+    .featured-posts article:nth-child(3),
+    .featured-posts article:nth-child(5) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .featured-posts article:nth-child(4),
+    .featured-posts article:nth-child(6) {
+        grid-column-start: 3;
+        grid-column-end: 5;
     }
 }
 
